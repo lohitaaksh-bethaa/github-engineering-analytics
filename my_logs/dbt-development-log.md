@@ -1,4 +1,4 @@
-## Day 1 - Phase 1: Project Foundation
+# Day 1 - Phase 1: Project Foundation
 Date: 17 July 2026
 
 ### Goal
