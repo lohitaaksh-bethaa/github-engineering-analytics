@@ -105,14 +105,14 @@ github-engineering-analytics/
 
 ---
 
-# Current Progress
+## Current Progress
 
 | Phase | Status |
 |--------|--------|
 | Phase 1 – Project Foundation | ✅ Completed |
 | Phase 2 – Data Ingestion | ✅ Completed |
-| Phase 3 – dbt Project Setup | ⏳ Pending |
-| Phase 4 – Staging Models | ⏳ Pending |
+| Phase 3 – dbt Project Setup | ✅ Completed |
+| Phase 4 – Staging Models | ⏳ In Progress |
 | Phase 5 – Intermediate Models | ⏳ Pending |
 | Phase 6 – Data Mart Models | ⏳ Pending |
 | Phase 7 – Testing | ⏳ Pending |
@@ -179,13 +179,16 @@ Current implementation:
 GitHub REST API
         │
         ▼
-Python
+Python Extraction
         │
         ▼
-Pandas DataFrame
+Snowflake RAW Layer
         │
         ▼
-Snowflake RAW.REPOSITORIES
+dbt Sources
+        │
+        ▼
+dbt Staging Models
 ```
 
 Upcoming implementation:

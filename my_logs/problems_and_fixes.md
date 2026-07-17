@@ -29,3 +29,23 @@ What I Learned:
 - GitHub API null values become NaN in pandas.
 - NaN is not automatically interpreted as SQL NULL by the Snowflake connector.
 - Converting the DataFrame to object type allows missing values to be replaced with Python None.
+
+
+
+## Issue 002 – dbt Unique Test Failure
+
+### Problem
+
+The `unique` test on `repository_id` failed for the staging model.
+
+### Root Cause
+
+The ingestion pipeline had been executed multiple times, inserting duplicate repository records into the `RAW.REPOSITORIES` table.
+
+### Solution
+
+Truncated the raw table during development and reloaded the data. Future iterations will replace this with a production-friendly deduplication or incremental loading strategy.
+
+### What I Learned
+
+A failing dbt test can reveal data quality issues in upstream ingestion rather than problems in the dbt model itself.

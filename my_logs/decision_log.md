@@ -50,3 +50,34 @@ Use Snowflake as the project's centralized cloud data warehouse.
 ### Trade-offs
 
 Requires connection configuration and cloud resources but provides a production-grade architecture.
+
+
+
+## Decision 003
+
+### Context
+
+A transformation framework was required to organize SQL transformations, testing, and documentation.
+
+### Options Considered
+
+1. Write standalone SQL scripts.
+2. Build transformations directly in Snowflake.
+3. Use dbt Core.
+
+### Decision
+
+Adopt dbt Core as the transformation framework.
+
+### Reason
+
+- Modular SQL development.
+- Version-controlled transformations.
+- Built-in testing.
+- Automatic documentation generation.
+- Model dependency management.
+- Industry-standard analytics engineering workflow.
+
+### Trade-offs
+
+Introduces additional project structure and configuration but significantly improves maintainability and scalability.
