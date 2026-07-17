@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: stg_repositories
+    description: "Staging model containing GitHub repository metadata extracted from the GitHub REST API."
+
+    columns:
+
+      - name: repository_id
+        description: "Unique identifier of the repository."
+        tests:
+          - unique
+          - not_null
+
+      - name: repository_name
+        description: "Short name of the repository."
+
+      - name: full_name
+        description: "Repository name including organization."
+
+      - name: language
+        description: "Primary programming language."
+
+      - name: created_at
+        description: "Repository creation timestamp."
+
+      - name: updated_at
+        description: "Repository last updated timestamp."
+
+      - name: pushed_at
+        description: "Timestamp of the latest push."
+
+      - name: stars
+        description: "Number of GitHub stars."
+
+      - name: forks
+        description: "Number of forks."
+
+      - name: watchers
+        description: "Number of watchers."
+
+      - name: open_issues
+        description: "Number of open issues."
+
+      - name: default_branch
+        description: "Default branch of the repository."
+
+      - name: ingestion_timestamp
+        description: "Timestamp when the record was loaded into Snowflake."
+        
