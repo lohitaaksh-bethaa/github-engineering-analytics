@@ -21,6 +21,7 @@ Converted the DataFrame to `object` type before replacing missing values:
 
 ```python
 df = df.astype(object).where(pd.notnull(df), None)
+```
 
 This correctly converted pandas NaN values into Python None, which the Snowflake connector translated into SQL NULL.
 
