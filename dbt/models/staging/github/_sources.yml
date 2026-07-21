@@ -8,3 +8,13 @@ sources:
     tables:
     - name: repositories
       description: "Raw data from GitHub API"
+    - name: pull_requests
+      description: "Raw GITHUB pull request data"
+    - name: commits
+      description: "Raw GITHUB commit data"
+    - name: issues
+      description: "Raw GITHUB issue data"
+    - name: contributors
+      description: "Raw GITHUB contributor data"
+    - name: releases
+      description: "Raw GITHUB release data"

@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: fct_commits
+    description: "Commit fact table."
+
+    columns:
+      - name: commit_sha
+        description: "Unique commit SHA."
+        tests:
+          - unique
+          - not_null
+
+      - name: repository_key
+        description: "Repository surrogate key."
+
+      - name: date_key
+        description: "Date surrogate key."
+
+      - name: additions
+        description: "Lines added."
+
+      - name: deletions
+        description: "Lines deleted."
+
+      - name: total_changes
+        description: "Total lines changed."

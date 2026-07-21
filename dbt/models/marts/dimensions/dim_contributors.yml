@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dim_contributors
+
+    columns:
+
+      - name: contributor_key
+        tests:
+          - unique
+          - not_null
+
+      - name: contributor_id
+        tests:
+          - unique
+          - not_null
+
+      - name: login
+        tests:
+          - not_null

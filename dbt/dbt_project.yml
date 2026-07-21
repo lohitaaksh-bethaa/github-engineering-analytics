@@ -37,5 +37,9 @@ models:
     intermediate:
       +materialized: ephemeral
     marts:
-      +materialized: table
+      dimensions:
+        +materialized: table
+      
+      facts:
+        +materialized: incremental
     

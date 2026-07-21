@@ -1,0 +1,19 @@
+select
+    pr_id,
+    repository_id,
+    repository_name,
+    title,
+    state,
+    author,
+    created_at,
+    updated_at,
+    merged_at,
+    closed_at,
+    is_merged,
+    comments,
+    commits,
+    additions,
+    deletions,
+    changed_files,
+    ingestion_timestamp
+from {{ source('raw', 'pull_requests') }}

@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_language
+
+    columns:
+
+      - name: language_key
+        tests:
+          - unique
+      
+      - name: language_name
+        tests:
+          - unique

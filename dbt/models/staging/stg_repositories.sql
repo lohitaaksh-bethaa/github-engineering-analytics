@@ -1,15 +1,15 @@
-SELECT 
-  repository_id,
-  repository_name,
-  full_name,
-  language,
-  cast(created_at as timestamp) as created_at,
-  cast(updated_at as timestamp) as updated_at,
-  cast(pushed_at as timestamp) as pushed_at,
-  stars,
-  forks,
-  watchers,
-  open_issues
-  default_branch,
-  ingestion_timestamp
+SELECT
+    repository_id,
+    repository_name,
+    full_name,
+    language,
+    CAST(created_at AS TIMESTAMP) AS created_at,
+    CAST(updated_at AS TIMESTAMP) AS updated_at,
+    CAST(pushed_at AS TIMESTAMP) AS pushed_at,
+    stars,
+    forks,
+    watchers,
+    open_issues,
+    default_branch,
+    ingestion_timestamp
 FROM {{ source('raw', 'repositories') }}

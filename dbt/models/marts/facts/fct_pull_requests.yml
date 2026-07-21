@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: fct_pull_requests
+
+    columns:
+
+      - name: repository_key
+        tests:
+          - relationships:
+              to: ref('dim_repository')
+              field: repository_key
+
+      - name: date_key
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: pr_id
+        tests:
+          - unique
+          - not_null
+
+      - name: state
+        tests:
+          - accepted_values:
+              values: ['open', 'closed', 'merged']

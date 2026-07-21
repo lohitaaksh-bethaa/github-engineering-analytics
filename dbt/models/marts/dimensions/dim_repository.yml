@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: dim_repository
+    description: "Repository dimension."
+
+    columns:
+      - name: repository_key
+        description: "Surrogate key."
+        tests:
+          - unique
+          - not_null
+
+      - name: repository_id
+        description: "GitHub repository ID."
+
+      - name: repository_name
+        description: "Repository name."
+
+      - name: language
+        description: "Primary programming language."
+
+      - name: default_branch
+        description: "Default Git branch."
